@@ -1,71 +1,94 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head> 
+<head>
   <meta charset="utf-8">
-  <title>Arabella's Portfolio</title>
+  <title>About Me Section</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Instrument+Sans:wght@400;700&family=Nunito+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
-  
   <style>
     body {
       margin: 0;
+      font-family: "Nunito Sans", sans-serif;
     }
 
+    /* NAV BAR */
     ul {
       list-style-type: none;
       margin: 0;
       padding: 0;
-      overflow: hidden;
-      background: linear-gradient(to right, #FFFFFF 0%, #ADBCC3 100%);
+      background: black;
       top: 0;
       width: 100%;
-      font-family: "Nunito Sans";
+      display: flex;
+      justify-content: flex-end;
     }
 
     li {
-      float: right;
+      display: inline;
     }
 
     li a {
       display: block;
-      color: black;
+      color: white;
       text-align: center;
       padding: 24px 16px;
       text-decoration: none;
     }
 
-    li a:hover:not(.active) {
+    li a:hover {
       background-color: #ADBCC3;
     }
 
-    h1 {
-      margin-top: 100px;
+    /* ABOUT ME */
+    .about-me-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #000;
       color: white;
-      text-align: right;
-      font-size: 7rem;
-      font-family: "Instrument Sans", sans-serif;
-    }
-    
-    .about-text {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    font-family: "Nunito Sans", sans-serif;
+      padding: 350px;
+      gap: 20px;
     }
 
-    .secondhalf {
-      padding: 50px;
-      background: linear-gradient(to right, #FFFFFF 0%, #ADBCC3 100%);
-      color: black;
+    .about-me-section img {
+      width: 100%;
+      max-width: 460px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .about-me-text {
+      flex: 1;
+    }
+
+    .about-me-text h1 {
+      font-size: 9rem;
+      font-family: "Instrument Sans", sans-serif;
+      margin: 0;
+      text-align: right;
+    }
+
+    .about-me-text p {
+      font-size: 1.2rem;
+      line-height: 1.8;
       font-family: "Nunito Sans", sans-serif;
     }
-  
-    .secondhalf h1 {
+
+    /* SECOND HALF */
+    .second-half {
+    
+      padding: 50px;
+      background: linear-gradient(to top, #FFFFFF 0%, #ADBCC3 100%);
       text-align: center;
-      color: black;
     }
 
-    /* Flexbox container for columns */
+    .second-half h1 {
+      font-size: 5rem;
+      font-family: "Instrument Sans", sans-serif;
+      margin-bottom: 40px;
+    }
+
     .row {
       display: flex;
       justify-content: space-between;
@@ -76,67 +99,97 @@
       width: 30%;
     }
 
-    .column h2, .column p {
+    .column h2 {
       color: black;
     }
 
-    /* Responsive layout for smaller screens */
+    .column p {
+      color: black;
+    }
+
+    /* responsive layout for smaller screens */
     @media screen and (max-width: 600px) {
+
+
       .row {
         flex-direction: column;
-        align-items: center;
       }
 
       .column {
         width: 100%;
-        text-align: center;
+        margin-bottom: 20px;
       }
+      
+    .personal-section {
+     padding: 50px;
+     background: black;
+     color: white;
+     text-align: center;
+}
+
+   .personal-section h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-family: "Instrument Sans", sans-serif;
+}
+
+.personal-section p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  font-family: "Nunito Sans", sans-serif;
+}
     }
   </style>
 </head>
 <body>
+  <!-- Nav Bar -->
+  <ul>
+    <li><a href="#contact">about</a></li>
+    <li><a href="#mywork">my work</a></li>
+    <li><a href="#aboutme">contact</a></li>
+  </ul>
 
-<ul>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#mywork">My Work</a></li>
-  <li><a href="#aboutme">About Me</a></li>
-</ul>
+  <!-- About Me Section -->
+  <div class="about-me-section">
+    <!-- About Me Image -->
+    <div>
+      <img src="about-me-image.HEIC" alt="About Me Image">
+    </div>
 
-<!-- About Me Section -->
-<div style="padding:50px; margin-top:0px; background-color:#000000; display: flex; align-items: center; justify-content: space-between; gap: 20px;">
-  <!-- About Me Image -->
-  <div style="width: 40%;">
-    <img src="about-me-image.HEIC" alt="About Me Image" width="460" height="345">
+    <!-- About Me Text -->
+    <div class="about-me-text">
+      <h1>about me</h1>
+      <p>Hi! I’m Arabella, a second-year student at the University of Waterloo, studying Global Business and Digital Arts. I’m passionate about using digital media and design to tell compelling stories that captivate and engage audiences. When I’m not immersed in my creative projects, you can find me café hopping downtown or re-watching the Scream franchise!</p>
+    </div>
   </div>
 
-  <!-- About Me Text -->
-  <div style="width: 50%; color: white;">
-    <h1>about me</h1>
-    <p class="about-text">Hi! I’m Arabella, a second year student at the University of Waterloo, studying Global Business and Digital Arts. I’m passionate about using digital media and design to tell compelling stories that captivate and engage audiences. When I’m not immersed in my creative projects, you can find me café hopping downtown or re-watching the Scream franchise!</p>
-  </div>
+  <!-- Second Section -->
+  <div class="second-half">
+    <h1>MY BIG THREE</h1>
+    <div class="row">
+      <div class="column">
+        <h2>01. Design with Purpose</h2>
+        <p>I always consider the emotional impact of everything I create on audiences and users, ensuring that each design effectively resonates and communicates its intended message.</p>
+      </div>
+      <div class="column">
+        <h2>02. Balance Creativity and Functionality</h2>
+        <p>In my designs, I strive to create a balance between aesthetic appeal and practical usability.</p>
+      </div>
+      <div class="column">
+        <h2>03. Stay Current and Adapt</h2>
+        <p>Design tools and trends constantly evolve. I ensure to stay updated on industry trends, adapting my skills and techniques accordingly.</p>
+        
+<!-- New Section -->
+<div class="personal-section">
+  <h1>let's get personal.</h1>
+  <p>Here’s a deeper look into what drives me, my inspirations, and the experiences that shaped my journey as a creative professional.</p>
 </div>
-
-<!-- Second Section -->
-<div class="secondhalf">
-  <h1>MY BIG THREE</h1>
-
-  <div class="row">
-    <div class="column">
-      <h2>Design with purpose</h2>
-      <p>I always consider the emotional impact of everything I create on audiences and users, ensuring that each design effectively resonates and communicates its intended message.</p>
-    </div>
+        
+        
+        
     
-    <div class="column">
-      <h2>Balance creativity and functionality</h2>
-      <p>In my designs, I strive to create a balance between aesthetic appeal and practical usability.</p>
-    </div>
-    
-    <div class="column">
-      <h2>Stay current and adapt</h2>
-      <p>Design tools and trends constantly evolve. I ensure to stay updated on industry trends, adapting my skills and techniques accordingly.</p>
+      </div>
     </div>
   </div>
-</div>
-
 </body>
 </html>
